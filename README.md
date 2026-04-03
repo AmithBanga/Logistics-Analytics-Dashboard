@@ -1,127 +1,149 @@
-# 📦 Logistics Analytics Dashboard (Excel)
+# 📦 Logistics Analytics Dashboard
 
-## 📊 Project Overview
-This project is an end-to-end logistics analytics dashboard built in Excel to analyze shipment performance, carrier efficiency, and delivery trends.
+> **An end-to-end Excel analytics project** — from raw shipment data to an interactive, dark-themed dashboard with slicers, pivot tables, and KPI cards.
 
-I started with a raw logistics dataset and used Power Query to clean and structure the data. From there, I built an interactive dashboard using PivotTables, calculated KPIs, and slicers to make the analysis dynamic.
+![Dashboard Preview](Logistics_Analytics_Dashboard.png)
 
-The goal was to turn messy shipment data into something that can actually be used for decision-making.
+---
+
+## 🚀 Project Overview
+
+This project transforms a real-world logistics dataset of **2,000 shipments** into a fully interactive Excel dashboard. It showcases the complete analytics workflow: data cleaning, pivot table modeling, KPI engineering, and professional dashboard design — all without a single line of code.
+
+The dashboard enables analysts to filter by **carrier**, **date range**, and **destination** to instantly surface performance insights across cost, delivery rate, transit time, and shipment volume.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🎛️ **Interactive Slicers** | Filter by carrier (Amazon, DHL, FedEx, LaserShip, OnTrac, UPS, USPS) and date |
+| 📊 **KPI Cards** | Total Shipments · Delivery Rate · Avg Cost · Avg Transit Days · Avg Miles |
+| 🍩 **Gauge Chart** | Circular delivery rate indicator for the selected carrier |
+| 📅 **Monthly Trend Line** | Shipment & delivery count across all 12 months |
+| 🏙️ **Top 7 Destinations** | Ranked by delivery rate with horizontal bar chart |
+| 💰 **Carrier Avg Cost** | Side-by-side cost comparison across all carriers |
+| ⚖️ **Carrier Avg Weight** | Average package weight per carrier |
+| ⏱️ **Carrier Avg Delivery Days** | Average transit time per carrier |
+
+---
+
+## 🗂️ Project Structure
+
+```
+logistics-dashboard/
+│
+├── 📊 Logistics_Analytics_Dashboard.xlsx   # Main Excel workbook
+│   ├── Sheet: Database                      # Raw dataset (2,000 rows)
+│   ├── Sheet: Analytics (Pivot Tables)      # All pivot table calculations
+│   └── Sheet: Dashboard                     # Final interactive dashboard
+│
+├── 📁 logistics_dataset.csv                 # Source data file
+│
+└── 📸 screenshots/
+    ├── Logistics_Analytics_Dashboard.png    # Full dashboard view
+    ├── Logistics_Analytics_KPIs.png         # KPI section close-up
+    ├── Showcasing_Pivot_Table.png           # Pivot table structure
+    └── Used_pptx_to_create_a_base_for_dashboard.png  # Layout planning stage
+```
+
+---
+
+## 🗃️ Dataset
+
+**File:** `logistics_dataset.csv`  
+**Records:** 2,000 shipments | **Year:** 2023
+
+| Column | Description |
+|---|---|
+| `Shipment_ID` | Unique identifier (e.g. SH10000) |
+| `Origin_Warehouse` | Dispatch location |
+| `Destination` | Delivery city |
+| `Carrier` | Shipping provider |
+| `Shipment_Date` | Date parcel was sent |
+| `Delivery_Date` | Date parcel was delivered |
+| `Weight_kg` | Package weight |
+| `Cost` | Shipment cost in USD |
+| `Status` | Delivered / In Transit / etc. |
+| `Distance_miles` | Route distance |
+| `Transit_Days` | Days in transit |
+
+**Carriers covered:** Amazon · DHL · FedEx · LaserShip · OnTrac · UPS · USPS
+
+---
+
+## 📐 How It Was Built
+
+### Step 1 — Layout Planning in PowerPoint
+The dashboard wireframe was designed in PowerPoint first, using dark-themed rounded rectangles to plan the card layout before building it in Excel. This ensured the visual hierarchy was intentional before any data was connected.
+
+![PowerPoint Layout Base](Used_pptx_to_create_a_base_for_dashboard.png)
+
+### Step 2 — Data Modeling with Pivot Tables
+All metrics are powered by pivot tables with custom calculated fields. A dedicated `KPI measures` group handles dynamic calculations for Delivery Rate, AVG Cost, AVG Transit Days, and more — all updating in real time when slicers are applied.
+
+![Pivot Tables](Showcasing_Pivot_Table.png)
+
+### Step 3 — KPI Engineering
+Six headline KPIs were engineered from the raw data and displayed as formatted cards at the top of the dashboard.
+
+![KPIs](Logistics_Analytics_KPIs.png)
+
+### Step 4 — Dashboard Assembly
+Charts were built directly from pivot tables and embedded in the dashboard sheet. The PowerPoint wireframe was used as a background layout guide, then replaced with live Excel shapes, charts, and slicers.
+
+---
+
+## 📈 Key Insights
+
+- 🏆 **Atlanta** leads all destinations with an **89% delivery rate**
+- 💸 **USPS** offers the lowest average cost at **$183.18** per shipment
+- ⚡ **FedEx** packages are the heaviest on average at **46.27 kg**
+- 📅 **August** saw the highest shipment volume of the year (**182 shipments**)
+- 🚚 **UPS** achieves the highest carrier delivery rate at **86%**
+- ⏱️ **USPS & LaserShip** are the fastest carriers at an average of **4.0 transit days**
 
 ---
 
 ## 🛠️ Tools Used
-- Microsoft Excel  
-- Power Query (Data Cleaning & Transformation)  
-- PivotTables  
-- Pivot Charts  
-- Slicers  
-- Excel Shapes (UI Design)  
+
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
+
+- **Microsoft Excel** — Pivot Tables, Calculated Fields, Slicers, Charts, Conditional Formatting
+- **Microsoft PowerPoint** — Dashboard wireframing and layout planning
+- **CSV / Raw Data** — Data cleaning and preparation
 
 ---
 
-## 🔑 Key KPIs
-- **Total Shipments:** 2,000  
-- **Delivery Rate:** 82%  
-- **Average Cost:** $204.98  
-- **Average Transit Time:** 4 Days  
-- **Average Distance:** 1,275 miles  
-- **Average Weight:** 30.18 kg  
+## 💡 Skills Demonstrated
+
+- ✅ Data cleaning and transformation in Excel
+- ✅ Pivot table design with custom KPI measures
+- ✅ Dynamic dashboard creation with slicers and timelines
+- ✅ Data visualization (bar charts, line charts, gauge/donut charts)
+- ✅ Dashboard UI/UX design — dark theme, consistent color language
+- ✅ Iterative layout planning (PowerPoint → Excel workflow)
 
 ---
 
-## 📈 Analysis Included
+## 🖥️ Getting Started
 
-### Monthly Shipment Trends
-- Compared total shipments vs delivered shipments by month  
-- Identified fluctuations in delivery performance  
+1. **Clone or download** this repository
+2. Open `Logistics_Analytics_Dashboard.xlsx` in **Microsoft Excel** (2016 or later recommended)
+3. Navigate to the **Dashboard** sheet
+4. Use the **carrier buttons** at the top or the **date slicer** on the right to filter the data
+5. All charts and KPIs update automatically
 
-### Carrier Performance
-- Delivery rate by carrier (UPS highest at 86%)  
-- Average cost comparison across carriers  
-- Transit time comparison  
-
-### Cost & Efficiency
-- Identified cost differences between carriers  
-- Compared cost vs performance trade-offs  
-
-### Destination Analysis
-- Top 7 destinations by delivery rate  
-- Atlanta had the highest performance at 89%  
-
-### Operational Metrics
-- Average shipment weight by carrier  
-- Average delivery time differences (~4.0–4.3 days)  
+> ⚠️ Some features (slicers, pivot charts) may not render correctly in Google Sheets or LibreOffice. Excel desktop is recommended.
 
 ---
 
-## ⚙️ Process
+## 📬 Contact
 
-### 1. Data Cleaning (Power Query)
-- Removed inconsistencies and missing values  
-- Standardized formats  
-- Prepared dataset for analysis  
-
-### 2. Data Modeling & Pivot Tables
-- Built structured PivotTables for KPIs and analysis  
-- Aggregated large datasets into meaningful metrics  
-
-### 3. KPI Calculations
-- Delivery Rate = Delivered Orders / Total Shipments  
-- Average Cost per Shipment  
-- Average Transit Days  
-- Distance & Weight metrics  
-
-### 4. Dashboard Design
-- Designed a clean, dark-themed layout  
-- Created KPI cards linked to PivotTables  
-- Structured as a one-page dashboard  
-
-### 5. Interactivity
-- Added slicers for carrier and time filtering  
-- Enabled dynamic updates across all visuals  
+Have questions or feedback? Feel free to open an issue or reach out!
 
 ---
 
-## 💡 Key Insights
-- UPS had the highest delivery rate (**86%**)  
-- DHL had the highest average cost  
-- Transit times were similar across carriers (~4 days)  
-- Atlanta had the strongest delivery performance (**89%**)  
-- Some months showed dips in delivery success, indicating potential inefficiencies  
-
----
-
-## 📌 Why This Project Stands Out
-- Uses realistic logistics and supply chain metrics  
-- Combines data cleaning, analysis, and visualization  
-- Fully interactive dashboard (not static)  
-- Built with a business/operations mindset  
-- Similar to real-world supply chain analyst work  
-
----
-
-## 📷 Dashboard Preview
-<img width="1228" height="689" alt="Logistics Analytics Dashboard" src="https://github.com/user-attachments/assets/7ec7d5a1-7e2c-4726-adcb-c51bb752cfe8" />
-
----
-
-## 📎 Files Included
-- `Logistics Analytics Dashboard.xlsx` → Full dashboard
-- 'Pivot Table.png' → Showcasing Pivot Tables and how they were set up
-- `README.md` → Project documentation  
-
----
-
-## 🧠 What I Learned
-- How to clean and structure operational data  
-- How to build dashboards that are actually useful  
-- How to translate data into business insights  
-- How to use Excel for end-to-end analysis  
-
----
-
-## 🚀 Future Improvements
-- Add forecasting (shipment trends)  
-- Rebuild dashboard in Power BI  
-- Add profit/margin analysis  
-- Automate data refresh  
+*Built with 📊 Excel and a lot of attention to detail.*

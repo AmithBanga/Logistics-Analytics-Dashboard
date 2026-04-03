@@ -78,20 +78,22 @@ logistics-dashboard/
 ### Step 1 — Layout Planning in PowerPoint
 The dashboard wireframe was designed in PowerPoint first, using dark-themed rounded rectangles to plan the card layout before building it in Excel. This ensured the visual hierarchy was intentional before any data was connected.
 
-![PowerPoint Layout Base](Used_pptx_to_create_a_base_for_dashboard.png)
+<img width="1275" height="785" alt="Used pptx to create a base for dashboard" src="https://github.com/user-attachments/assets/aa909e1b-682a-4ed1-a439-fbd3666d8d9c" />
 
 ### Step 2 — Data Modeling with Pivot Tables
 All metrics are powered by pivot tables with custom calculated fields. A dedicated `KPI measures` group handles dynamic calculations for Delivery Rate, AVG Cost, AVG Transit Days, and more — all updating in real time when slicers are applied.
 
-![Pivot Tables](Showcasing_Pivot_Table.png)
+<img width="1277" height="574" alt="Showcasing Pivot Table" src="https://github.com/user-attachments/assets/eba0de31-30a5-4814-8deb-5b45e75f82a7" />
 
 ### Step 3 — KPI Engineering
 Six headline KPIs were engineered from the raw data and displayed as formatted cards at the top of the dashboard.
 
-![KPIs](Logistics_Analytics_KPIs.png)
+<img width="1209" height="523" alt="Logistics Analytics KPIs" src="https://github.com/user-attachments/assets/0fdc8b88-f730-464f-922f-ec8e647e8a2e" />
 
 ### Step 4 — Dashboard Assembly
 Charts were built directly from pivot tables and embedded in the dashboard sheet. The PowerPoint wireframe was used as a background layout guide, then replaced with live Excel shapes, charts, and slicers.
+
+<img width="1228" height="689" alt="Logistics Analytics Dashboard" src="https://github.com/user-attachments/assets/d9e6673b-c5de-456e-beb4-1576ed903828" />
 
 ---
 
